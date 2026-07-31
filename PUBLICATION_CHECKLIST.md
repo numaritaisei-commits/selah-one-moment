@@ -5,10 +5,10 @@ Do not submit unless every required item is checked.
 ## Competition validity
 
 - [ ] Gloo AI and YouVersion were both called successfully under free participant entitlement.
-- [ ] No card, payment method, paid trial, or billable fallback is attached.
-- [ ] YouVersion app has accepted the selected Bible license and displays required attribution.
-- [x] Writeup is 500 words or fewer (464 words before final video-link substitution).
-- [x] Public Kaggle Notebook Version 2 completed: https://www.kaggle.com/code/numaritaisei/selah-technical-evidence
+- [x] No card, payment method, paid trial, or billable fallback is attached.
+- [x] The YouVersion app can access BSB (Bible ID 3034) and its official metadata supplies the required title, abbreviation, copyright, and Bible.com link.
+- [x] Writeup is 500 words or fewer (473 words before final video-link substitution).
+- [x] Public Kaggle Notebook Version 3 completed: https://www.kaggle.com/code/numaritaisei/selah-technical-evidence
 - [ ] YouTube video is Public, no longer than three minutes, and plays while signed out.
 - [x] Public code/setup link works while signed out.
 - [ ] Cover/media gallery is attached.
@@ -16,7 +16,7 @@ Do not submit unless every required item is checked.
 ## Evidence
 
 - [ ] One uninterrupted live dual-API demo is recorded.
-- [x] Fixed tests pass; 33/33 was re-run on 2026-07-31 JST and the exact evidence boundary is recorded.
+- [x] Fixed tests pass; 37/37 was re-run on 2026-07-31 JST and the exact evidence boundary is recorded.
 - [x] Invalid Gloo passage key is rejected.
 - [x] Missing YouVersion attribution is rejected.
 - [x] API outage leaves the original draft usable.

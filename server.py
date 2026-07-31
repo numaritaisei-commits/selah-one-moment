@@ -307,6 +307,10 @@ class LiveProviders:
         envelope = strict_json_loads(result.body)
         if not isinstance(envelope, dict):
             raise SafeError("Gloo completion response is invalid")
+        if envelope.get("model") != self._gloo_model:
+            raise SafeError("Gloo completion model did not match the requested model")
+        if envelope.get("auto_routing") is True:
+            raise SafeError("Gloo automatic routing was refused")
         choices = envelope.get("choices")
         if not isinstance(choices, list) or len(choices) != 1:
             raise SafeError("Gloo completion choices are invalid")
@@ -546,7 +550,10 @@ class Handler(BaseHTTPRequestHandler):
                 HTTPStatus.BAD_GATEWAY,
                 {
                     "request_id": request_id,
-                    "error": "Selah could not complete the pause. You can keep editing or post normally.",
+                    "error": (
+                        "Selah could not complete the pause. Your draft is unchanged; "
+                        "keep editing or continue without Selah."
+                    ),
                     "fail_open": True,
                 },
             )

@@ -33,7 +33,7 @@ Open `http://127.0.0.1:8765`. Offline preview never calls either provider and in
 python3 -m unittest discover -s tests -v
 ```
 
-The reviewed standard-library suite was re-run on 2026-07-31 JST: **33/33 passed**.
+The reviewed standard-library suite was re-run on 2026-07-31 JST: **37/37 passed**.
 
 ## Public evidence
 

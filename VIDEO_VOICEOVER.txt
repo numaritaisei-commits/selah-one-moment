@@ -1,0 +1,13 @@
+One post can outlive one emotion. This is a fictional reply, but the moment is familiar: the words are written, tension is high, and send is one tap away.
+
+Selah adds one choice at that exact moment. Not a warning. Not censorship. The author can continue immediately, or choose what matters most and take an optional eight-second pause. Nothing is posted, and every original word stays visible. The name is inspired by the recurring Scriptural word Selah; we do not claim one settled translation.
+
+When the live badge is on, the local server sends this fixed synthetic draft and chosen intent to Gloo AI. Gloo can select only two opaque keys: one passage key and one reflection-question key, both from server-side allowlists. Its output is never shown directly. It cannot write the reply, quote Scripture, or invent a reference. The validated passage key maps to a fixed U S F M reference. YouVersion then returns the exact passage text, human-readable reference, Bible version, link, and copyright shown on this card.
+
+The question is an invitation, not a command. The author can return to the untouched draft, or rewrite it in their own words. Selah never auto-posts, and this prototype is not connected to a social network. This changed reply is an illustration, not evidence that Selah reduces harm.
+
+Behind the calm screen is a narrow, fail-closed integration. Strict parsing rejects extra or duplicate fields, invalid keys, and non-finite values. Provider hosts and paths are fixed. Redirects, oversized responses, mismatched passage IDs, and incomplete attribution are refused. Credentials and tokens remain in process memory, and the app writes no drafts or provider responses to disk. Provider data handling still follows each provider’s terms.
+
+Thirty-seven of thirty-seven local safety tests pass. They cover voluntary activation, model identity, origin and session checks, request limits, exact-attribution fixtures, offline no-verse behavior, and injected provider failures. When the pause fails, Selah fails open: the draft remains and normal editing continues. These are engineering results, not a real-world impact study.
+
+Selah does not decide what you may say, and it never speaks for you. It gives you one moment to choose who you want to be before you speak.

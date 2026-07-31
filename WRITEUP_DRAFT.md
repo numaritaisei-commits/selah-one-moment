@@ -2,25 +2,25 @@
 
 ## Inspiration
 
-One post can outlive one emotion. Most safety tools act after harm—or decide what a person may say. Selah enters at a more human moment: the instant before an angry reply becomes irreversible. It is inspired by the recurring Scriptural word *Selah*, without claiming a single settled translation of that word.
+One post can outlive one emotion. Selah targets the eight seconds before an angry reply is sent: a moment when the author can still choose what happens next. It is inspired by the recurring Scriptural word *Selah*, without claiming a single settled translation of that word.
 
 ## What it does
 
-Selah is a local working prototype that offers an optional eight-second pause; it does not connect to or post on a social network. It never censors, rewrites, or posts for the user. The original draft remains visible. The user names what matters most—being understood, protecting the relationship, or being accurate—then chooses whether to continue, edit, or keep the original.
+Selah is a local prototype with a gated live adapter. It offers an optional eight-second pause and does not connect to or post on a social network. It never censors, rewrites, or posts for the user. The original draft remains visible. The author names what matters most—being understood, protecting the relationship, or being accurate—then chooses whether to continue, edit, or keep the original.
 
-The intervention is intentionally small. It is not a generic verse recommender. It brings a relevant Scriptural perspective into the exact decision where tone can change a conversation, while preserving the author’s agency.
+The intervention is intentionally small. It is not a generic verse recommender. It offers an allowlisted Scriptural perspective at the decision point while preserving the author’s agency.
 
 ## How we built it
 
-The browser sends a synthetic draft and intent to a local, dependency-free Python backend. Gloo AI may return only two fields: one opaque `passage_key` from a server-side allowlist and one brief reflection question. Strict parsing rejects duplicate keys, extra fields, non-finite values, multiple choices, incomplete output, and any reference outside the allowlist.
+The browser sends a fixed synthetic draft and intent to a dependency-free local Python backend. Gloo AI may return exactly two opaque enum keys—`passage_key` and `question_key`—from server-side allowlists. Its output is never shown directly. The server maps the keys to a fixed USFM reference and a prewritten reflection question. Strict parsing rejects malformed output, model mismatch, automatic routing, and anything outside those allowlists.
 
-The validated key maps to a fixed USFM reference. YouVersion then provides the exact passage text, human-readable reference, Bible version metadata, link, and copyright. Selah never asks a language model to quote, paraphrase, or invent a verse. If attribution is incomplete or the returned passage ID does not match the request, nothing is displayed.
+YouVersion then provides the exact passage text, human-readable reference, Bible version metadata, link, and copyright. Gloo supplies bounded contextual selection; YouVersion is the sole source of displayed Scripture text and attribution. Selah never asks a language model to quote, paraphrase, or invent a verse. If attribution is incomplete or the returned passage ID does not match the request, nothing is displayed.
 
-The live adapter uses fixed HTTPS hosts and paths, refuses redirects, caps request and response sizes, and keeps credentials and OAuth tokens in process memory. The app does not write drafts or provider content to disk. This is an application boundary; provider handling remains governed by provider terms. For the demo, we use synthetic text only.
+The live adapter fixes provider hosts and paths, refuses redirects, bounds network data, and keeps credentials in process memory. The app writes no draft or provider content to disk; provider handling remains governed by provider terms. The public Notebook uses synthetic fixtures only. Live-provider evidence will be claimed only after a zero-cost dual-API run passes entitlement and Bible-license gates.
 
 ## Reliability and evidence
 
-The 33-test standard-library safety suite covers strict JSON parsing, passage and question allowlisting, fixed synthetic live input, origin/session checks, atomic request budgets, the local HTTP flow, no-verse offline behavior, token reuse in memory, exact YouVersion attribution flow, and frontend non-persistence checks. Provider failure is fail-open: the optional pause ends, the untouched draft remains, and normal posting is still available. This count is adapter evidence, not a claim of real-world impact.
+All 37 local tests passed. The public Notebook separately reproduces 7/7 Gloo-contract fixtures and 4/4 YouVersion exact-text and attribution fixtures. Tests cover the allowlists, model identity, fixed synthetic input, origin/session controls, one-request budgets, offline no-verse behavior, exact attribution, and frontend non-persistence. Provider failure is fail-open: no provider result blocks or changes the draft. These are adapter results, not evidence of provider uptime or real-world impact.
 
 ## Vision
 

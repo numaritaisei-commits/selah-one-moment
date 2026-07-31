@@ -8,3 +8,7 @@ __pycache__/
 *.pem
 credentials*
 secrets*
+
+# Private capture inputs and generated video exports must not be committed.
+video_assets/*.mov
+video_assets/*.mp4

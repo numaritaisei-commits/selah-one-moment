@@ -104,17 +104,17 @@ All people, names, posts, and replies shown below are fictional. Captions are on
 
 **Picture**
 
-- Show the reviewed 1280×720 `video_assets/evidence-card.svg`: **33 / 33 local safety tests passed**.
+- Show the reviewed 1280×720 `video_assets/evidence-card.svg`: **37 / 37 local safety tests passed**.
 - Cycle through the tested categories named below.
 - End on the actual fail-open UI: **The pause could not be completed** and **Your draft is still here**.
 
 **Voiceover**
 
-> Thirty-three of thirty-three local safety tests pass. They cover voluntary activation, origin and session checks, request limits, exact-attribution fixtures, offline no-verse behavior, and injected provider failures. When the pause fails, Selah fails open: the draft remains and normal editing continues. These are engineering results, not a real-world impact study.
+> Thirty-seven of thirty-seven local safety tests pass. They cover voluntary activation, model identity, origin and session checks, request limits, exact-attribution fixtures, offline no-verse behavior, and injected provider failures. When the pause fails, Selah fails open: the draft remains and normal editing continues. These are engineering results, not a real-world impact study.
 
 **Captions**
 
-- `33 / 33 LOCAL SAFETY TESTS PASSED`
+- `37 / 37 LOCAL SAFETY TESTS PASSED`
 - `FAIL-OPEN: THE OPTIONAL PAUSE ENDS; THE DRAFT REMAINS`
 - `ENGINEERING EVIDENCE · NOT MEASURED SOCIAL IMPACT`
 
@@ -140,4 +140,4 @@ All people, names, posts, and replies shown below are fictional. Captions are on
 - `VIDEO_CAPTIONS.srt` contains 13 monotonic cues ending at exactly 2:45; burn them in and verify readability on a phone-sized player.
 - The live sequence is one uninterrupted captured run and visibly shows the live badge plus exact YouVersion attribution.
 - No credential, account identifier, browser chrome, terminal, provider portal, request header, or personal information appears in any frame.
-- The spoken claims remain exactly bounded to the recorded run, the 33/33 local suite, and documented application behavior.
+- The spoken claims remain exactly bounded to the recorded run, the 37/37 local suite, and documented application behavior.
