@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#091426" />
+    <meta
+      name="description"
+      content="Selah offers an optional eight-second pause before a social post is sent."
+    />
+    <title>Selah — one moment before send</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="story" aria-labelledby="story-title">
+        <div class="brand"><span class="brand-mark">S</span><span>SELAH</span></div>
+        <div class="story-copy">
+          <p class="eyebrow">ONE MOMENT BEFORE SEND</p>
+          <h1 id="story-title">One post can outlive one emotion.</h1>
+          <p class="lead">
+            Selah is an optional eight-second pause that helps you choose how you want
+            to show up—without censoring, rewriting, or posting for you.
+          </p>
+          <div class="principles" aria-label="Selah principles">
+            <span>Voluntary</span><span>Your words</span><span>Fail-open</span>
+          </div>
+        </div>
+        <p class="story-note">Inspired by the recurring Scriptural word <em>Selah</em>.</p>
+      </section>
+
+      <section class="demo" aria-label="Interactive Selah demo">
+        <header class="demo-header">
+          <div>
+            <p class="overline">LOCAL SIMULATED COMPOSER</p>
+            <h2>Reply in your own words</h2>
+          </div>
+          <span id="mode-badge" class="mode-badge">Checking mode…</span>
+        </header>
+
+        <article class="context-card">
+          <div class="avatar" aria-hidden="true">JM</div>
+          <div>
+            <div class="context-meta"><strong>Jordan M.</strong><span>Fictional scenario · 2m</span></div>
+            <p>
+              If we want people to trust this project, we should publish the assumptions
+              behind the numbers too.
+            </p>
+          </div>
+        </article>
+
+        <form id="composer" novalidate>
+          <label for="draft">Your reply</label>
+          <textarea id="draft" maxlength="2000" required>That's a ridiculous take. You clearly didn't read anything we shared.</textarea>
+          <div class="composer-meta">
+            <span id="char-count">78 / 2000</span>
+            <span>Synthetic demo text only</span>
+          </div>
+
+          <fieldset>
+            <legend>What matters most right now?</legend>
+            <div class="intent-grid">
+              <label><input type="radio" name="intent" value="be_understood" checked /><span>Be understood</span></label>
+              <label><input type="radio" name="intent" value="protect_relationship" /><span>Protect the relationship</span></label>
+              <label><input type="radio" name="intent" value="be_accurate" /><span>Be accurate</span></label>
+            </div>
+          </fieldset>
+
+          <div class="actions">
+            <button id="post-now" class="button secondary" type="button">Continue without Selah</button>
+            <button id="pause" class="button primary" type="submit">
+              <span>Pause with Selah</span><span aria-hidden="true">→</span>
+            </button>
+          </div>
+        </form>
+
+        <section id="pause-panel" class="pause-panel hidden" aria-live="polite">
+          <div id="countdown-view" class="countdown-view">
+            <div class="orb"><span id="countdown">8</span></div>
+            <p class="overline">THIS MOMENT IS YOURS</p>
+            <h3>Nothing has been posted.</h3>
+            <p>Breathe. Your original words remain untouched.</p>
+            <button id="skip" class="text-button" type="button">Skip the pause</button>
+          </div>
+
+          <div id="reflection-view" class="reflection-view hidden">
+            <p class="overline">A QUESTION, NOT A COMMAND</p>
+            <h3 id="reflection-question"></h3>
+            <article id="passage-card" class="passage-card hidden">
+              <blockquote id="passage-content"></blockquote>
+              <p class="passage-meta">
+                <span id="passage-reference"></span>
+                <span id="passage-version"></span>
+              </p>
+              <p id="passage-copyright" class="copyright"></p>
+              <a id="passage-link" rel="noopener noreferrer" target="_blank">View version on YouVersion</a>
+            </article>
+            <div id="live-proof" class="live-proof hidden">
+              <span>Gloo AI</span> selected a validated reference from the server allowlist.
+              <span>YouVersion</span> returned the exact text and attribution shown above.
+            </div>
+            <div id="offline-notice" class="notice hidden"></div>
+            <p id="provider-note" class="provider-note"></p>
+            <div class="reflection-actions">
+              <button id="edit" class="button primary" type="button">Rewrite in my words</button>
+              <button id="continue" class="button secondary" type="button">Return to original draft</button>
+            </div>
+          </div>
+
+          <div id="error-view" class="error-view hidden">
+            <p class="overline">FAIL-OPEN BY DESIGN</p>
+            <h3>The pause could not be completed.</h3>
+            <p>Your draft is still here. You can keep editing or continue without Selah.</p>
+            <button id="error-return" class="button primary" type="button">Return to my draft</button>
+          </div>
+        </section>
+
+        <footer class="demo-footer">
+          <span>No social-network connection</span><span>No persistent draft storage</span><span>Exact verse via YouVersion in live mode</span>
+        </footer>
+      </section>
+    </main>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
