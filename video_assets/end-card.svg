@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title description">
+  <title id="title">Selah end card</title>
+  <desc id="description">Selah, one moment before send, with public source and public Kaggle Notebook links.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#061327"/>
+      <stop offset="0.56" stop-color="#0a1d32"/>
+      <stop offset="1" stop-color="#25170f"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="82%" cy="50%" r="44%">
+      <stop offset="0" stop-color="#ffd791" stop-opacity="0.34"/>
+      <stop offset="0.35" stop-color="#e6a44a" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#e6a44a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe4aa"/>
+      <stop offset="1" stop-color="#d68e34"/>
+    </linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#sun)"/>
+
+  <g transform="translate(925 360)" fill="none" stroke="url(#gold)">
+    <ellipse rx="180" ry="48" stroke-width="2" opacity="0.24"/>
+    <ellipse rx="145" ry="40" stroke-width="2" opacity="0.34"/>
+    <ellipse rx="110" ry="32" stroke-width="2.5" opacity="0.48"/>
+    <ellipse rx="75" ry="24" stroke-width="3" opacity="0.68"/>
+    <circle r="38" stroke-width="3.5" opacity="0.92"/>
+    <circle r="25" fill="#f1b75e" fill-opacity="0.18" stroke-width="1.5"/>
+  </g>
+  <circle cx="925" cy="360" r="82" fill="#e9a64f" opacity="0.08" filter="url(#soft)"/>
+  <circle cx="1118" cy="178" r="3" fill="#ffe1a4" opacity="0.8"/>
+  <circle cx="1045" cy="126" r="2" fill="#ffe1a4" opacity="0.55"/>
+  <circle cx="1176" cy="254" r="2.5" fill="#e9a84d" opacity="0.62"/>
+
+  <g transform="translate(82 74)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <circle cx="27" cy="27" r="27" fill="none" stroke="url(#gold)" stroke-width="2.2"/>
+    <text x="27" y="37" text-anchor="middle" fill="#ffe9c0" font-size="28" font-weight="700">S</text>
+    <text x="70" y="23" fill="#f7dca6" font-size="14" font-weight="700" letter-spacing="3.5">SELAH</text>
+    <text x="70" y="47" fill="#849ab0" font-size="13" letter-spacing="1.4">ONE MOMENT BEFORE SEND</text>
+  </g>
+
+  <g transform="translate(82 210)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <text x="0" y="0" fill="#f8f5ef" font-size="56" font-weight="650">Selah never speaks for you.</text>
+    <text x="0" y="65" fill="#f8f5ef" font-size="56" font-weight="650">It gives you one moment</text>
+    <text x="0" y="130" fill="#f8f5ef" font-size="56" font-weight="650">to choose.</text>
+    <text x="0" y="184" fill="#a8b8c8" font-size="19">Voluntary · Your words · Fail-open</text>
+  </g>
+
+  <g transform="translate(82 505)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <rect width="690" height="118" rx="18" fill="#101c2b" stroke="#31485d"/>
+    <text x="24" y="31" fill="#eeb96b" font-size="12" font-weight="700" letter-spacing="1.8">PUBLIC EVIDENCE</text>
+    <text x="24" y="63" fill="#eff2f4" font-size="17" font-weight="600">github.com/numaritaisei-commits/selah-one-moment</text>
+    <text x="24" y="91" fill="#b1c0cf" font-size="16">kaggle.com/code/numaritaisei/selah-technical-evidence</text>
+  </g>
+
+  <g transform="translate(82 655)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <rect width="166" height="32" rx="16" fill="#152739" stroke="#426079"/>
+    <text x="83" y="21" text-anchor="middle" fill="#b8c7d5" font-size="12" font-weight="700" letter-spacing="1.1">PUBLIC SOURCE</text>
+    <rect x="180" width="198" height="32" rx="16" fill="#152739" stroke="#426079"/>
+    <text x="279" y="21" text-anchor="middle" fill="#b8c7d5" font-size="12" font-weight="700" letter-spacing="1.1">PUBLIC NOTEBOOK</text>
+    <rect x="392" width="176" height="32" rx="16" fill="#2b2118" stroke="#9b6937"/>
+    <text x="480" y="21" text-anchor="middle" fill="#ffd89a" font-size="12" font-weight="700" letter-spacing="1.1">MIT CODE LICENSE</text>
+  </g>
+</svg>

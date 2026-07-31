@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-labelledby="title description">
+  <title id="title">Selah measured engineering evidence</title>
+  <desc id="description">Thirty-three of thirty-three local safety tests passed, with explicit categories and a fail-open result. The card states that this is engineering evidence, not measured social impact.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071427"/>
+      <stop offset="0.62" stop-color="#0b2035"/>
+      <stop offset="1" stop-color="#1d1714"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="22%" cy="46%" r="48%">
+      <stop offset="0" stop-color="#f0b35b" stop-opacity="0.17"/>
+      <stop offset="1" stop-color="#f0b35b" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ring" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffe2a3"/>
+      <stop offset="1" stop-color="#d58f35"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+
+  <g transform="translate(72 56)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <circle cx="24" cy="24" r="24" fill="none" stroke="url(#ring)" stroke-width="2"/>
+    <text x="24" y="33" text-anchor="middle" fill="#ffe5b7" font-size="25" font-weight="700">S</text>
+    <text x="61" y="20" fill="#f6d79f" font-size="13" font-weight="700" letter-spacing="3">SELAH</text>
+    <text x="61" y="42" fill="#879cb3" font-size="13" letter-spacing="1.2">MEASURED ENGINEERING EVIDENCE</text>
+  </g>
+
+  <g transform="translate(72 148)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <text x="0" y="0" fill="#f7f4ed" font-size="44" font-weight="650">Boundaries tested before the story is told.</text>
+    <text x="0" y="42" fill="#a8b7c9" font-size="19">Local, deterministic, synthetic evidence only.</text>
+  </g>
+
+  <g transform="translate(72 240)" filter="url(#shadow)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <rect width="356" height="350" rx="28" fill="#111f31" stroke="#b77c35" stroke-width="1.5"/>
+    <circle cx="178" cy="128" r="88" fill="#142a40" stroke="url(#ring)" stroke-width="7"/>
+    <text x="178" y="130" text-anchor="middle" fill="#fff4dd" font-size="68" font-weight="750">33/33</text>
+    <text x="178" y="164" text-anchor="middle" fill="#f0bc72" font-size="13" font-weight="700" letter-spacing="2">PASSED</text>
+    <text x="178" y="248" text-anchor="middle" fill="#f7f4ed" font-size="22" font-weight="650">Local safety suite</text>
+    <text x="178" y="280" text-anchor="middle" fill="#9dafc1" font-size="14">Re-run 2026-07-31 JST</text>
+    <text x="178" y="316" text-anchor="middle" fill="#71869d" font-size="12" letter-spacing="0.8">NO LIVE-API OR IMPACT CLAIM</text>
+  </g>
+
+  <g transform="translate(466 240)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <rect width="742" height="350" rx="28" fill="#0e1d2c" stroke="#304a62"/>
+    <text x="34" y="48" fill="#7e94aa" font-size="12" font-weight="700" letter-spacing="1.8">WHAT THE SUITE ACTUALLY COVERS</text>
+
+    <g transform="translate(34 78)" fill="#f7f4ed" font-size="18" font-weight="600">
+      <circle cx="8" cy="10" r="5" fill="#eeb96b"/>
+      <text x="28" y="16">Strict JSON: duplicate, extra, NaN, trailing text</text>
+      <circle cx="8" cy="54" r="5" fill="#68bdb6"/>
+      <text x="28" y="60">Exact enum allowlists and fixed synthetic input</text>
+      <circle cx="8" cy="98" r="5" fill="#eeb96b"/>
+      <text x="28" y="104">Origin, session, host, size, and request-budget gates</text>
+      <circle cx="8" cy="142" r="5" fill="#68bdb6"/>
+      <text x="28" y="148">YouVersion ID, link, and attribution integrity</text>
+      <circle cx="8" cy="186" r="5" fill="#eeb96b"/>
+      <text x="28" y="192">Offline no-verse and frontend non-persistence</text>
+    </g>
+
+    <g transform="translate(34 296)">
+      <rect width="674" height="34" rx="10" fill="#281f1a" stroke="#7a5535"/>
+      <text x="17" y="23" fill="#ffd494" font-size="14" font-weight="650">Injected failure → optional pause ends → untouched draft remains editable</text>
+    </g>
+  </g>
+
+  <g transform="translate(72 638)" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+    <rect width="1136" height="44" rx="13" fill="#111a25" stroke="#293b50"/>
+    <text x="568" y="29" text-anchor="middle" fill="#a5b5c6" font-size="14" font-weight="650" letter-spacing="1.1">ENGINEERING EVIDENCE · NOT MEASURED SOCIAL IMPACT</text>
+  </g>
+</svg>
