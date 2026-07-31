@@ -111,7 +111,16 @@ class FakeTransport:
             content = json.dumps(
                 {"passage_key": "gentle_answer", "question_key": "lower_heat"}
             )
-            body = {"choices": [{"finish_reason": "stop", "message": {"role": "assistant", "content": content}}]}
+            body = {
+                "model": "fixture-model",
+                "auto_routing": False,
+                "choices": [
+                    {
+                        "finish_reason": "stop",
+                        "message": {"role": "assistant", "content": content},
+                    }
+                ],
+            }
         elif path == "/v1/bibles/3034":
             body = {
                 "id": 3034,
@@ -142,7 +151,40 @@ class LiveAdapterTests(unittest.TestCase):
         result = self.providers.reflect(next(iter(server.LIVE_SYNTHETIC_DRAFTS)), "be_accurate")
         self.assertEqual(result["mode"], "live")
         self.assertEqual(result["passage"]["reference"], "Proverbs 15:1")
+        self.assertEqual(result["passage"]["version_title"], "Berean Standard Bible")
+        self.assertEqual(result["passage"]["version"], "BSB")
+        self.assertEqual(result["passage"]["copyright"], "Public-domain test attribution")
         self.assertEqual(len(self.transport.calls), 4)
+
+    def test_rejects_completion_from_different_model(self):
+        original = self.transport
+
+        def mismatched_model_transport(**kwargs):
+            result = original(**kwargs)
+            if kwargs["path"] == server.GLOO_COMPLETIONS_PATH:
+                body = json.loads(result.body)
+                body["model"] = "unexpected-model"
+                return server.HttpResult(200, {}, json.dumps(body).encode())
+            return result
+
+        self.providers._transport = mismatched_model_transport
+        with self.assertRaises(server.SafeError):
+            self.providers.choose_passage("synthetic", "be_accurate")
+
+    def test_rejects_automatic_model_routing(self):
+        original = self.transport
+
+        def auto_routed_transport(**kwargs):
+            result = original(**kwargs)
+            if kwargs["path"] == server.GLOO_COMPLETIONS_PATH:
+                body = json.loads(result.body)
+                body["auto_routing"] = True
+                return server.HttpResult(200, {}, json.dumps(body).encode())
+            return result
+
+        self.providers._transport = auto_routed_transport
+        with self.assertRaises(server.SafeError):
+            self.providers.choose_passage("synthetic", "be_accurate")
 
     def test_token_is_reused_in_memory(self):
         self.providers.choose_passage("first", "be_accurate")
@@ -207,6 +249,15 @@ class StaticSafetyTests(unittest.TestCase):
 
     def test_no_external_resource(self):
         self.assertNotIn("https://", self.html)
+
+    def test_live_request_timeout_allows_provider_budget(self):
+        self.assertIn("controller.abort(), 65000", self.js)
+        self.assertNotIn("controller.abort(), 35000", self.js)
+
+    def test_live_version_display_includes_title_and_abbreviation(self):
+        self.assertIn("result.passage.version_title", self.js)
+        self.assertIn("(${result.passage.version})", self.js)
+        self.assertIn("result.passage.copyright", self.js)
 
 
 class ServerIntegrationTests(unittest.TestCase):
@@ -275,6 +326,11 @@ class ServerIntegrationTests(unittest.TestCase):
         payload = json.loads(body)
         self.assertEqual(status, 502)
         self.assertTrue(payload["fail_open"])
+        self.assertEqual(
+            payload["error"],
+            "Selah could not complete the pause. Your draft is unchanged; "
+            "keep editing or continue without Selah.",
+        )
 
     def test_cross_origin_post_is_refused(self):
         raw = json.dumps({"draft": "synthetic", "intent": "be_accurate"}).encode()
