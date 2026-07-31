@@ -57,7 +57,10 @@ function showReflection(result) {
     setHidden(liveProof, false);
     safeText("#passage-content", result.passage.content);
     safeText("#passage-reference", result.passage.reference);
-    safeText("#passage-version", result.passage.version);
+    safeText(
+      "#passage-version",
+      `${result.passage.version_title} (${result.passage.version})`,
+    );
     safeText("#passage-copyright", result.passage.copyright);
     const link = $("#passage-link");
     link.href = result.passage.youversion_url;
@@ -74,7 +77,7 @@ async function requestReflection() {
   if (!sessionToken) throw new Error("missing local session");
   const intent = $("input[name='intent']:checked").value;
   const controller = new AbortController();
-  const timeout = window.setTimeout(() => controller.abort(), 35000);
+  const timeout = window.setTimeout(() => controller.abort(), 65000);
   try {
     const response = await fetch("/api/reflect", {
       method: "POST",
