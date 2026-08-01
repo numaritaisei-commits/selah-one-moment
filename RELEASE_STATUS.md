@@ -7,18 +7,22 @@ Checkpoint: 2026-08-01 08:55 JST
 - The user explicitly reopened the card-free support path after the earlier
   02:00 cutoff. The official challenge promo was recovered from the exact
   organizer email without displaying or storing its value.
-- Historical official records show the challenge promo as redeemed successfully,
-  while a fresh redemption attempt on the official Gloo Studio Billing page
-  returned `Organization must complete onboarding before redeeming promo codes`.
-  The inactive organization still exposes no usable credit or API access.
-- The organization exists but is currently shown as inactive. Weekly spend is
-  still `$0.00`, and no payment method was added.
+- Historical official records show the challenge promo as redeemed successfully.
+  The organization initially remained inactive, but now appears `Active` in the
+  official Organizations page. API Credentials and Usage still redirect to the
+  Studio home page, so API access is not enabled.
+- Billing remains Pay As You Go with weekly spend `$0.00`, no payment method,
+  and spend limit `— / No limit`. Re-entering the exact official challenge promo
+  now returns `Promo code has expired`; no usable credit balance appears.
 - A bounded reply was sent in the existing official support thread requesting
   card-free onboarding activation. It included neither the promo value nor any
   credential and expressly declined paid usage.
 - A deadline-critical follow-up asked official support to confirm promo-first
   charging, a USD 20-or-lower hard spend cap, zero paid overage, and no card
   authorization/minimum/immediate charge. No reply has arrived yet.
+- A second urgent factual update asked support to apply the participant credit
+  manually or issue a replacement card-free promo and identify the exact
+  covered model/route. It disclosed no promo value or credential.
 - Gloo's official developer page led to the official Developer Network on
   Discord, but membership is still pending review, so no Discord message could
   be posted. No account details or promo value were disclosed.
@@ -38,7 +42,7 @@ Checkpoint: 2026-08-01 08:55 JST
 - Public code repository: https://github.com/numaritaisei-commits/selah-one-moment
 - YouVersion developer registration and the non-commercial Selah application are complete. A memory-only App Key check returned HTTP 200 for BSB Bible ID 3034 and `JAS.1.19`; the metadata includes title, abbreviation, copyright, and an official `www.bible.com` deep link.
 - No extra fast-track publisher agreement was accepted because BSB is already available to the application through the official YouVersion API.
-- Gloo Studio shows Pay As You Go with current weekly spend `$0.00` and no payment method. A fresh official Billing check did not confirm usable credit: redemption is blocked by incomplete organization onboarding, and API access remains inactive. One explicit card-free activation request is pending with official support.
+- Gloo Studio shows the organization as Active and Pay As You Go with current weekly spend `$0.00`, no payment method, and no configured spend limit. No usable credit is visible, the official promo is expired, and API Credentials/Usage remain inaccessible. An urgent card-free replacement/manual-credit request is pending with official support.
 - Notebook Version 3 retained stale subtotals (`33`) after four tests were added. Version 4 fixed the total but grouped two tests semantically rather than by their actual unittest class. Version 5 now reports the exact class inventory: Live Adapter `9`, Static Safety `6`, and Total `37`.
 - Notebook Version 5 official status is `COMPLETE`; its pulled latest source matches the local cell-source hash, and its metadata remains Public, Internet off, GPU off, with no dataset, competition, kernel, or model sources.
 - Version 5 is a markdown-only precision correction and does not alter the reviewed executable fixture cells.
@@ -47,7 +51,7 @@ Checkpoint: 2026-08-01 08:55 JST
 - Cover: `static/selah-cover.png`, 1672×941 PNG.
 - Public GitHub repository and README returned HTTP `200` without authentication; expected root, `static`, `tests`, and `notebook` inventory is present.
 - High-confidence scan found no private key, known token prefix, or phone pattern. The sole email-shaped string is an explicit synthetic `example` test fixture.
-- The official Gloo challenge page states that YouVersion access is free to participants with rate limits and that Gloo Studio offers `$20` credit to the first 500 participants. The account-specific flow has no payment method and records the promo as redeemed, but the inactive organization still exposes neither usable credit nor API access.
+- The official Gloo challenge page states that YouVersion access is free to participants with rate limits and that Gloo Studio offers `$20` credit to the first 500 participants. The account-specific flow has no payment method and records the promo historically as redeemed, but the active organization exposes neither usable credit nor API access and now labels the same promo expired.
 
 ## Earlier terminal decision (superseded by the reopened check above)
 
