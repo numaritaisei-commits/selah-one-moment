@@ -8,7 +8,7 @@ Do not submit unless every required item is checked.
 - [x] No card, payment method, paid trial, or billable fallback is attached.
 - [x] The YouVersion app can access BSB (Bible ID 3034) and its official metadata supplies the required title, abbreviation, copyright, and Bible.com link.
 - [x] Writeup is 500 words or fewer (473 words before final video-link substitution).
-- [x] Public Kaggle Notebook Version 3 completed: https://www.kaggle.com/code/numaritaisei/selah-technical-evidence
+- [x] Corrected public Kaggle Notebook Version 5 is `COMPLETE`, remains Public with Internet/GPU off and no attached sources, and displays the exact 37-test class inventory consistently: https://www.kaggle.com/code/numaritaisei/selah-technical-evidence
 - [ ] YouTube video is Public, no longer than three minutes, and plays while signed out.
 - [x] Public code/setup link works while signed out.
 - [ ] Cover/media gallery is attached.

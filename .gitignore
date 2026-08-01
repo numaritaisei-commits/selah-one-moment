@@ -12,3 +12,8 @@ secrets*
 # Private capture inputs and generated video exports must not be committed.
 video_assets/*.mov
 video_assets/*.mp4
+
+# Internal orchestration and fixture-only production helpers are not release assets.
+.workflow/
+video_assets/FIXTURE_DRAFT_BUILD.md
+video_assets/build_fixture_draft.swift

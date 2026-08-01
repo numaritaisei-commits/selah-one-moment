@@ -4,7 +4,7 @@ Target runtime: **2:45**. Target delivery: calm, human, approximately 130 spoken
 
 ## Recording gate
 
-Do not record or publish the live-proof sequence until one real, zero-cost dual-API run succeeds in **LIVE · GLOO + YOUVERSION** mode with the fixed synthetic draft. The captured card must visibly contain the exact YouVersion passage reference, Bible version, and copyright. Never substitute the offline preview, fixtures, or a recreated card for that proof. Crop all browser chrome, terminals, credentials, tokens, request headers, and account details.
+Start the recording before the first and only real provider request, after the zero-cost entitlement, credentials, and Bible license are verified. Keep and publish the live-proof sequence only if that same uninterrupted run succeeds in **LIVE · GLOO + YOUVERSION** mode with the fixed synthetic draft. Do not make an unrecorded proof call first and do not auto-retry a failed capture. The captured card must visibly contain the exact YouVersion passage reference, Bible version, and copyright. Never substitute the offline preview, fixtures, or a recreated card for that proof. Crop all browser chrome, terminals, credentials, tokens, request headers, and private account details.
 
 All people, names, posts, and replies shown below are fictional. Captions are on-screen text and are not part of the spoken word count.
 
