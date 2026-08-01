@@ -10,8 +10,11 @@ builder has no placeholder mode.
 
 ## 1. Capture contract
 
-Only record after a real zero-cost Gloo + YouVersion request has succeeded and
-the selected YouVersion Bible is licensed to this app.
+Begin recording before the first and only real provider request, but only after
+the zero-cost entitlement, credentials, and selected YouVersion Bible license
+are verified. Keep the recording only if that same uninterrupted request
+successfully completes both the Gloo and YouVersion steps; otherwise reject the
+candidate. Do not make an unrecorded proof call first and do not auto-retry.
 
 Create a fresh, silent `1280×720` recording lasting `98–102` seconds:
 
@@ -95,9 +98,10 @@ without skipping. Fail the candidate unless every item below is true:
 - `0:42–1:15` is visibly one uninterrupted live run;
 - live badge, exact YouVersion passage reference, version title/abbreviation,
   link, and copyright are fully readable and never covered;
-- no fixture-only banner, placeholder, browser chrome, terminal, account UI,
-  email, phone, face, real name, token, key, request, header, or private URL is
-  visible or audible;
+- no fixture-only banner, placeholder, browser chrome, terminal, private account
+  UI, email, phone, face, real name, token, key, request, header, or private URL
+  is visible or audible; the reviewed public project URLs on the end card are
+  intentional and are not account-UI evidence;
 - architecture, evidence, and end-card claims match the public repository and
   Notebook; the app never claims measured social impact;
 - the final SHA-256 is recorded before upload and the uploaded file is verified
